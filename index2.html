@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавление информации о цветке</title>
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- ШАПКА -->
+    <div class="top-bar">
+        <div class="logo">tp.ru</div>
+        <div class="search">
+            <input type="text" placeholder="Поиск...">
+            <button></button>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+
+    <!-- МЕНЮ -->
+    <div class="menu">
+        <a href="index.html">Главная</a>
+        <a href="index2.html" class="active">Добавить цветок</a>
+    </div>
+
+    <!-- ОСНОВНОЙ БЛОК -->
+    <div class="main">
+
+        <div class="content">
+
+            <div class="post">
+
+                <h2>Добавление информации о цветке</h2>
+
+                <form name="flower_form" enctype="multipart/form-data">
+
+                    <label>Наименование цветка:<br>
+                        <input class="input" type="text" name="flower_name" required>
+                    </label><br><br>
+
+                    <label>Изображение цветка:<br>
+                        <input class="input" type="file" name="flower_img" accept=".jpg, .jpeg" required>
+                    </label><br><br>
+
+                    <label>Частота цветения:<br>
+                        <select class="input" name="flowering" required>
+                            <option value="once_year">1 раз в год</option>
+                            <option value="twice_year">2 раза в год</option>
+                            <option value="seasonal">Сезонное</option>
+                            <option value="constant">Постоянное</option>
+                        </select>
+                    </label><br><br>
+
+                    <label>Способ размножения:<br>
+                        <select class="input" name="reproduction" required>
+                            <option value="seeds">Семенами</option>
+                            <option value="cuttings">Черенками</option>
+                            <option value="division">Делением куста</option>
+                            <option value="bulbs">Луковицами</option>
+                        </select>
+                    </label><br><br>
+
+                    <label>Температура (°C):<br>
+                        От: <input class="input small" type="number" name="temp_min" min="-20" max="50" required>
+                        До: <input class="input small" type="number" name="temp_max" min="-20" max="50" required>
+                    </label><br><br>
+
+                    <label>Описание цветка:<br>
+                        <textarea class="input" name="description" cols="50" rows="5" required></textarea>
+                    </label><br><br>
+
+                    <hr>
+                    <label>Основной цвет цветка:<br>
+                        <input class="input" type="color" name="flower_color">
+                    </label><br><br>
+
+                    <label>Тип растения:<br>
+                        <input class="input" list="plant_types" name="plant_type">
+                        <datalist id="plant_types">
+                            <option value="Комнатное">
+                            <option value="Садовое">
+                            <option value="Тропическое">
+                            <option value="Суккулент">
+                        </datalist>
+                    </label><br><br>
+
+                    <input class="btn" type="submit" value="Добавить цветок">
+                    <input class="btn" type="reset" value="Очистить">
+
+                </form>
+
+              <div id="result">
+             </div>
+            </div>
+
+        </div>
+
+<!-- САЙДБАР -->
+<div class="sidebar">
+    <div class="block">
+        <h3>Цветы</h3>
+        <ul>
+            <li><a href="images/цветок1.jpg">Роза</a></li>
+            <li><a href="#">Тюльпан</a></li>
+            <li><a href="#">Орхидея</a></li>
+            <li><a href="#">Лилия</a></li>
+            <li><a href="#">Пион</a></li>
+            <li><a href="#">Фиалка</a></li>
+            <li><a href="#">Гвоздика</a></li>
+            <li><a href="#">Хризантема</a></li>
+            <li><a href="#">Гербера</a></li>
+            <li><a href="#">Астра</a></li>
+            <li><a href="#">Нарцисс</a></li>
+            <li><a href="#">Ирис</a></li>
+            <li><a href="#">Калла</a></li>
+            <li><a href="#">Гортензия</a></li>
+            <li><a href="#">Лаванда</a></li>
+            <li><a href="#">Анемон</a></li>
+            <li><a href="#">Бегония</a></li>
+            <li><a href="#">Вербена</a></li>
+            <li><a href="#">Гладиолус</a></li>
+            <li><a href="#">Дельфиниум</a></li>
+            <li><a href="#">Жасмин</a></li>
+            <li><a href="#">Камелия</a></li>
+            <li><a href="#">Крокус</a></li>
+            <li><a href="#">Лотос</a></li>
+            <li><a href="#">Магнолия</a></li>
+            <li><a href="#">Немезия</a></li>
+            <li><a href="#">Петуния</a></li>
+            <li><a href="#">Ромашка</a></li>
+            <li><a href="#">Фрезия</a></li>
+            <li><a href="#">Эустома</a></li>
+      </ul>
+    </div>
+</div>
+
+        <div style="clear: both;"></div>
+
+    </div>
+
+    <!-- ФУТЕР -->
+    <div class="footer">
+        © 2026 tp.ru
+    </div>
+
+</div>
+<script>
+document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault(); 
+    const form = e.target;
+
+    const fileInput = form.flower_img.files[0];
+    let imgURL = "";
+    if (fileInput) {
+        imgURL = URL.createObjectURL(fileInput);
+    }
+
+    const result = document.getElementById("result");
+    result.innerHTML = `
+        <h2>Результат</h2>
+        <p><b>Название:</b> ${form.flower_name.value}</p>
+        <p><b>Частота цветения:</b> ${form.flowering.value}</p>
+        <p><b>Размножение:</b> ${form.reproduction.value}</p>
+        <p><b>Температура:</b> ${form.temp_min.value} — ${form.temp_max.value} °C</p>
+        <p><b>Описание:</b> ${form.description.value}</p>
+        <p><b>Тип растения:</b> ${form.plant_type.value}</p>
+        <p><b>Основной цвет:</b> 
+            <span style="background:${form.flower_color.value}; padding:4px 20px; border:1px solid #000;"></span>
+        </p>
+        <p><b>Фото цветка:</b></p>
+        <img src="${imgURL}" style="max-width:300px; border-radius:10px; border:1px solid #ccc;">
+    `;
+});
+</script>
+
+</body>
+</html>
