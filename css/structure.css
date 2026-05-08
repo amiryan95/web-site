@@ -1,0 +1,142 @@
+/* structure.css */
+body {
+    margin: 30;
+    font-family: Arial;
+    background: url("../images/bck.png") repeat-x;
+}
+
+/* КОНТЕЙНЕР */
+.wrapper {
+    width: 64%;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+/* Шапка */
+.top-bar {
+    padding: 20px 30px 20px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.logo {
+    float: left;
+}
+
+.search {
+    float: right;
+    margin-top: 4px;
+    border-radius: 30px;
+}
+
+.search-text {
+    border: none;
+    padding: 6px 10px;
+    width: 170px;
+}
+
+.search-btn {
+    border: none;
+    padding: 6px 18px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Меню */
+.menu {
+    padding: 18px 30px;
+    margin-bottom: 10px;
+
+}
+
+/* Главный блок */
+.main {
+    overflow: hidden;
+    padding: 0 10px;
+}
+
+.content {
+    float: left;
+    width: 68%;
+}
+
+.sidebar {
+    float: right;
+    width: 28%;
+}
+
+.date-box {
+    padding: 15px 65px 10px;
+    min-height: 80px;
+}
+
+/* Пост */
+.post {
+    padding: 10px 20px 15px;
+}
+
+/* Иконка RSS */
+.rss-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+/* Поиск в сайдбаре */
+.sidebar-search {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 10px 12px;
+    margin-top: 5px;
+}
+
+.search-text-sidebar {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 6px 8px;
+    font-size: 12px;
+    min-width: 0;
+}
+
+.search-btn-sidebar {
+    border: none;
+    padding: 6px 16px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+/* Блоки */
+.block {
+    margin-bottom: 20px;
+}
+
+/* Футер */
+.footer {
+    clear: both;
+    padding: 46px 25px;
+    margin-top: 20px;
+}
+
+.footer-left {
+    float: left;
+ }
+
+.footer-right {
+    float: right;
+    margin-top: -20px;
+}
+
+.footer-rss {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-left: 4px;
+}
