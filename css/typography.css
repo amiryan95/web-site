@@ -1,0 +1,113 @@
+/* typography.css */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    padding-left: 55px;
+}
+
+.date-box {
+    font-weight: bold;
+    font-size: 17px;
+    text-align: left;
+    color: #fff;
+}
+
+.post_head {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 4px;
+    }
+
+.post_meta {
+    font-size: 11px;
+    color: #666;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.post_body {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    color: #333;
+    
+}
+
+.post_comments {
+    font-weight: bold;
+    text-align: right;
+
+}
+
+.post_comments a {
+    color: #21759b;
+ }
+
+.rss-comment-row {
+    padding: 0 12px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.rss-link {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.rss-link a {
+    color: #666;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 13px;
+    font-stretch: condensed;
+    
+}
+
+/* Заголовки сайдбара */
+.block h3 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    padding: 8px 12px;
+    margin: 0 0 8px;
+}
+
+/* Списки */
+.block ul {
+    list-style: none;
+    padding: 0 12px;
+    margin: 0;
+}
+
+.block ul li {
+    padding: 4px 0 4px 20px;
+    font-size: 13px;
+}
+
+.block ul li a {
+    color: #21759b;
+    text-decoration: none;
+}
+
+/* Футер */
+.footer {
+    font-size: 11px;
+    color: #fff;
+}
+
+.footer-right span {
+    font-size: 13px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: #555;
+    text-decoration: none;
+}
